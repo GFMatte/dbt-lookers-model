@@ -1,0 +1,10 @@
+version: 2
+
+seeds:
+  - name: distribution_centers
+    description: "Dimension table for distribution centers"
+  #- name: events
+  #- name: invetoy_items
+  #- name: order_items
+  #- name: products
+  #- name: orders 

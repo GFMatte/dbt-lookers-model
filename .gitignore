@@ -1,0 +1,4 @@
+DataSources/*.csv
+target/
+dbt_packages/
+logs/

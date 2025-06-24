@@ -1,0 +1,30 @@
+version: 2
+
+# Write here the sources for the dbt model LookerEcommerce
+# The info here is as it comes from the database, with the same table names and with schema
+# the same as the database schema.
+# The sources are used to create the staging models in the dbt project.
+
+sources:
+  - name: LookerEcommerce
+    database: LookerEcommerce
+    schema: dbo
+    tables:
+      - name: users
+        description: "Table containing user information"
+
+      - name: events
+        description: "Table containing user events"
+
+      - name: inventory_items
+        description: "Table containing inventory items"
+
+      - name: order_items
+        description: "Table containing order items"
+
+      - name: products
+        description: "Table containing product information"
+
+      - name: orders
+        description: "Table containing order information"
+
