@@ -1,15 +1,35 @@
-Welcome to your new dbt project!
+# dbt-lookers-model
 
-### Using the starter project
+This repository contains a **dbt project** for transforming and modeling data from the **Looker Ecommerce** dataset. The goal is to build a reliable and analytics-ready data model for reporting, product insights, and customer behavior analysis.
 
-Try running the following commands:
-- dbt run
-- dbt test
+---
 
+## 📦 Project Overview
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+This project follows a standard **dbt structure**, using raw source data to build well-documented staging and mart-level models.
+
+### 🧩 Key Sources
+- `users.csv`
+- `events.csv`
+- `inventory_items.csv`
+- `order_items.csv`
+- `orders.csv`
+- `products.csv`
+
+These are loaded as seeds or external sources and transformed through layered dbt models.
+
+---
+
+## 🗺️ Model Structure
+
+### `staging/`
+Cleans and standardizes raw source data.
+
+- `stg_users`
+- `stg_events`
+- `stg_orders`
+- `stg_order_items`
+- `stg_products`
+
+### `marts/`
+Joins and aggregates data for business use ca
