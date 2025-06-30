@@ -30,9 +30,10 @@ SELECT
     pb.product_name,
     pb.product_category,
     -- facts (e.g. profit analysis)
-    oi.sales_amount,
-    ii.cost_of_goods_sold,
-    oi.sales_amount - ii.cost_of_goods_sold AS profit
+    -- applying macro for coalescing and rounding   
+    {{ coalesce_and_round('oi.sales_amount') }} AS sales_amount,
+    {{ coalesce_and_round('ii.cost_of_goods_sold') }} AS cost_of_goods_sold,
+    {{ coalesce_and_round('oi.sales_amount - ii.cost_of_goods_sold') }} AS profit
 FROM product_base pb 
 LEFT JOIN inventory_items ii 
     ON pb.product_id = ii.product_id 
